@@ -1,5 +1,5 @@
-class ResponsiveMenu{
-  constructor(responsiveMenu, navList, navListLi){
+class ResponsiveMenu {
+  constructor(responsiveMenu, navList, navListLi) {
     this.responsiveMenu = document.querySelector(responsiveMenu);
     this.navList = document.querySelector(navList);
     this.navLinks = document.querySelectorAll(navListLi);
@@ -8,28 +8,29 @@ class ResponsiveMenu{
     this.handleClick = this.handleClick.bind(this);
   }
 
-  animateLinks(){
+  animateLinks() {
     this.navLinks.forEach((link, index) => {
       link.style.animation
         ? (link.style.animation = "")
-        : (link.style.animation = 'naviLinkFade 0.5s ease forwards 0.3s');
+        : (link.style.animation = "navLinkFade 0.5s ease forwards 0.3s");
     });
   }
 
-  handleClick(){
-  this.navList.classList.toggle(this.activeClass);
-  this.animateLinks();
-}
+  handleClick() {
+    this.navList.classList.toggle(this.activeClass);
+    this.responsiveMenu.classList.toggle(this.activeClass);
+    this.animateLinks();
+  }
 
-  addClickEvent(){
+  addClickEvent() {
     this.responsiveMenu.addEventListener("click", this.handleClick);
   }
-    init(){
-      if(this.responsiveMenu){
-        this.addClickEvent();
-      }
-      return this;
+  init() {
+    if (this.responsiveMenu) {
+      this.addClickEvent();
     }
+    return this;
+  }
 }
 
 const responsiveMenu = new ResponsiveMenu(
