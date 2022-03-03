@@ -4,7 +4,7 @@
 }
 
 a {
-  color: #fff;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   transition: 0.3s;
 }
@@ -23,9 +23,15 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-family: monospace;
-  background: #6060da;
-  height: 8vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif, Times, serif;
+  background: rgb(60, 179, 113);
+  background: linear-gradient(
+    90deg,
+    rgba(60, 179, 113, 1) 0%,
+    rgba(25, 133, 47, 1) 47%,
+    rgba(0, 100, 0, 1) 93%
+  );
+  height: 10vh;
 }
 
 .nav-list {
@@ -46,7 +52,7 @@ nav {
 .responsive-menu div {
   width: 32px;
   height: 2px;
-  background: #fff;
+  background: rgb(255, 255, 255);
   margin: 8px;
 }
 
@@ -56,11 +62,11 @@ nav {
   }
   .nav-list {
     position: absolute;
-    top: 8vh;
+    top: 10vh;
     right: 0;
     width: 50vw;
     height: 92vh;
-    background: #c2b5b5;
+    background: #3cb371;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -98,4 +104,23 @@ nav {
   .responsive-menu.active .line3 {
     transform: rotate(45deg) translate(-5px, -7px);
   }
+}
+body{
+  background-color:rgb(228, 228, 228);
+  margin: 0;
+}
+
+.box{
+  display: flex;
+  width: 400px;
+  height: 10000px;
+  border: 1px solid black;
+  margin: 40px auto;
+}
+
+.box h1 {
+  display : inline-block;
+  position: relative;
+  left: 30px;
+  top: 30px;
 }
