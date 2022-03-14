@@ -6,7 +6,7 @@
 }
 
 a {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   text-decoration: none;
   transition: 0.3s;
   padding: 9px;
@@ -21,15 +21,9 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-family: 'Roboto', sans-serif;
-  background: rgb(60, 179, 113);
-  background: linear-gradient(
-    90deg,
-    rgba(60, 179, 113, 1) 0%,
-    rgba(25, 133, 47, 1) 47%,
-    rgba(0, 100, 0, 1) 93%
-  );
-  height: 10vh;
+  font-family: "Roboto", sans-serif;
+  background: rgb(255, 255, 255);
+  height: 13vh;
 }
 
 .nav-list {
@@ -50,7 +44,7 @@ nav {
 .responsive-menu div {
   width: 32px;
   height: 2px;
-  background: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
   margin: 8px;
 }
 
@@ -59,8 +53,9 @@ nav {
     overflow-x: hidden;
   }
   .nav-list {
+    border-top: 1px solid rgb(0, 0, 0);
     position: absolute;
-    top: 10vh;
+    top: 13vh;
     right: 0;
     width: 50vw;
     height: 92vh;
@@ -73,7 +68,7 @@ nav {
   }
 
   .nav-list a {
-    border: 1px solid white;
+    border: 1px solid rgb(255, 255, 255);
   }
 
   .nav-list li {
@@ -86,6 +81,23 @@ nav {
   .nav-list.active {
     transform: translateX(0);
   }
+
+  .section-main {
+    flex-direction: column !important;
+  }
+
+  .section-main-first {
+    align-items: center;
+  }
+
+  .section-main-first-image {
+    padding-top: 30px;
+  }
+
+  .section-main-second-paragraph {
+    padding: 0px 20px;
+  }
+
   @keyframes navLinkFade {
     from {
       opacity: 0;
@@ -109,16 +121,21 @@ nav {
   }
 }
 body {
-  background-color: rgb(167, 158, 158);
+  background: rgb(60, 179, 113);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 100, 0, 1) 93% rgba(25, 133, 47, 1) 47%,
+    rgba(60, 179, 113, 1) 0%
+  );
   margin: 0;
 }
 
-.main{
-  border-top: 1px solid black;
-  margin-bottom: 48px;
+.main {
+  border-top: 1px solid rgb(0, 0, 0);
+  /* margin-bottom: 48px; */
 }
 
-.section-main{
+.section-main {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -126,33 +143,94 @@ body {
   padding-top: 50px;
 }
 
-.section-main-first{
+.section-main-first {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  padding: 30px;
 }
 
-.section-main-first-title{
-  font-family: 'Roboto', sans-serif;
+.section-main-first-title {
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
-  font-size:64px;
+  font-size: 64px;
+  color: rgb(255, 255, 255);
+}
+
+.section-main-first-subtitle {
+  padding: 20px 0;
+  font-family: "Sarala", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
   color: #fff;
 }
 
-.section-main-first-subtitle{
-  font-family: 'Sarala', sans-serif;
-  font-weight: 400;
-  font-size: 24px;
-}
-
-.section-main-first-button{
+.section-main-first-button {
   border: none;
-  width: 180px;
+  width: 200px;
   height: 60px;
   box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
-  border-radius:8px;
-  font-family: 'Sarala', sans-serif;
+  border-radius: 8px;
+  font-family: "Sarala", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  color: #666666;
+  color: #5c5959;
+}
+
+.section-main-first-button:hover {
+  background-color: rgb(221, 214, 214);
+}
+
+.section-main-first-image {
+  height: 350px;
+}
+
+.section-main-second {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 48px 20px;
+  padding-bottom: 48px;
+}
+
+.section-main-second-title {
+  align-items: center;
+  text-align: center;
+  border-top: 1px solid rgb(255, 255, 255);
+  padding-top: 48px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 16px;
+}
+
+.section-main-second-paragraph {
+  font-family: "Sarala", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  text-align: justify;
+  padding: 0px 20px;
+}
+
+.footer {
+  padding: 32px;
+  border-top: 1px solid rgb(255, 255, 255);
+}
+
+.footer-img {
+  height: 48px;
+  display: block;
+  margin: 0 auto;
+}
+
+.footer-paragraph {
+  font-family: "Sarala", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #fff;
+  opacity: 0.5;
+  text-align: center;
 }
